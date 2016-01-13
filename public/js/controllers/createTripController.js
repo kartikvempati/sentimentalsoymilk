@@ -34,11 +34,16 @@ angular.module('app.create', ['app.services'])
   };
 
   $scope.getWeather = function (activity) {
-    console.log("got weather for a trip");
-    $http.get('/api/weather')
+    console.log(activity.location)
+    var lat = activity.location.coordinate.latitude;
+    var lon = activity.location.coordinate.longitude;
+    $http.get('/api/weather/'+lat+'/'+lon)
       .success(function (data) {
-        activity.weather = data
-        console.log(activity.weather)
+        activity.weather = {};
+        console.log(data)
+        activity.weather.max = data.daily.data[0].temperatureMax;
+        activity.weather.min = data.daily.data[0].temperatureMax
+        activity.weather.summary = data.daily.data[0].summary;
       }) 
   }
 

@@ -102,11 +102,11 @@
               <p>{{activity.category}}</p>
               <p>{{activity.rating}}/10</p>
               <a href="{{activity.url}}" target="_blank">Website</a>
-              <div class='weatherButton' ng-show="!activity.weather" ng-click='getWeather(activity)'>
+              <div class='weatherButton' ng-hide="activity.weather" ng-click='getWeather(activity)'>
                   <button class="btn btn-success">Get the Weather</button>
               </div>
               <div class='weather' ng-show='activity.weather'>
-
+                <p>{{activity.weather.summary}}<p>
               </div>
               <!-- <button class="btn btn-success" ng-click="addToTrip()">Add</button> -->
           </div>

@@ -56,7 +56,7 @@ module.exports = function(app, express) {
       console.log('logged in user', req.user);
       res.redirect('/#');
     });
-  app.get('/api/weather', controller.fetchWeatherData)
+  app.get('/api/weather/*', controller.fetchWeatherData)
 
  //###### Live but not used in production############
   //app.get('/api/user/*', userController.findUser);
