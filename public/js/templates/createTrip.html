@@ -93,26 +93,21 @@
           <div class="row" ng-click="addToTrip()">
               <img class="addActivityImage" src="{{activity.image_url}}" alt="">
               <p><strong>{{activity.name}}</strong></p>
-<<<<<<< 52fda751ebf8dd435334c1b71113dac8d16f086d
               <p>{{activity.location.display_address.join(", ")}}</p>
               <p>{{activity.rating}}/5</p>
               <p><img src="{{activity.rating_img_url}}"></p>
               <p>Has been reviewed {{activity.review_count}} times</p>
               <p class = "yelpLink"><a href="{{activity.url}}">Yelp Page</a></p>
-=======
               <p>{{activity.address.split(',')[0]}}</p>
               <p>{{activity.category}}</p>
               <p>{{activity.rating}}/10</p>
               <a href="{{activity.url}}" target="_blank">Website</a>
-              <div class='weatherButton' ng-show="!activity.weather">
-                <form action = "/api/weather">
+              <div class='weatherButton' ng-show="!activity.weather" ng-click='getWeather(activity)'>
                   <button class="btn btn-success">Get the Weather</button>
-                </form>
               </div>
               <div class='weather' ng-show='activity.weather'>
 
               </div>
->>>>>>> Add weather button and hook it up to forecast.io api
               <!-- <button class="btn btn-success" ng-click="addToTrip()">Add</button> -->
           </div>
         </li>

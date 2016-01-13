@@ -28,9 +28,19 @@ angular.module('app.create', ['app.services'])
           // $scope.activities is an array of all the activities found by the api
           // at the given destination
           $scope.activities = data;
+          console.log($scope.activities)
         });
       }
   };
+
+  $scope.getWeather = function (activity) {
+    console.log("got weather for a trip");
+    $http.get('/api/weather')
+      .success(function (data) {
+        activity.weather = data
+        console.log(activity.weather)
+      }) 
+  }
 
   // $scope.itinerary is an emtpy array that will contain all the activities the user will add
   // to their trip
