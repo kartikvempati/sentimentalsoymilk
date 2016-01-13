@@ -29,7 +29,7 @@ angular.module('app.create', ['app.services'])
           // at the given destination
           $scope.activities = data;
         });
-    }
+      }
   };
 
   // $scope.itinerary is an emtpy array that will contain all the activities the user will add

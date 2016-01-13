@@ -129,6 +129,16 @@ module.exports = {
       res.status(400).send(err);
     });
   },
+  //<h4> fetchWeatherData </h4>
+  // Gets the weather report for the location specified 
+  // at the time specified 
+  fetchWeatherData: function (req, res, next) {
+    request('https://api.forecast.io/forecast/c1886414ac678c908104c2a20e4874c5/37.783583,-122.409063,2016-01-12T12:00:00', function (err, response, body) {
+      if (!err) {
+        res.send(body);
+      }
+    })
+  },
 
   //<h4>  saveCityData </h4>
   // Adds the searched city to the database
