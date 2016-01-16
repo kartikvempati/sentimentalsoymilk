@@ -18,9 +18,9 @@ angular.module('app.create', ['app.services'])
     console.log('start itinerary');
     // this if block ensures that the Itinerary Name City and State are present
     // before submitting the form
-    if (!$scope.itineraryName || !$scope.city || !$scope.state) {
-      return;
-    } else {
+    // if (!$scope.city || !$scope.state) {
+      // return;
+    // } else {
       // $scope.formCompleted set to true removes the form and begins populating
       // the rest of the page.
       $scope.formCompleted = true;
@@ -41,7 +41,7 @@ angular.module('app.create', ['app.services'])
             $scope.activities = data;
           });
         }
-      }
+      
   };
 
   $scope.getPhotos = function(){
@@ -239,9 +239,8 @@ angular.module('app.create', ['app.services'])
         Map.getCityfromGeo(geoObj).then(function(obj) {
           $scope.city = obj.city;
           $scope.state = obj.state;
-          if ($scope.itineraryName.length === 0) {
-            $scope.itineraryName = 'My Adventure';
-          }
+          // if ($scope.itineraryName.length === 0) {
+          // }
           $scope.geoObj = obj;
           $scope.startItinerary();
           $scope.getPhotos();
