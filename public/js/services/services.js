@@ -270,7 +270,7 @@ angular.module('app.services',[])
 
   //takes a geoObj with lat/lng props and returns city info back
   map.getCityfromGeo = function(geoObj) {
-    var url = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + geoObj.lat + ',' + geoObj.lng + '&key=' + googleGeoKey;
+    var url = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + geoObj.lat + ',' + geoObj.lng + '&key=' + 'AIzaSyARvAlQKAAFI-gVlcKeSFhWNrhcpVLllWc';
     return $http.get(url)
     .then(function(results) {
       //console.log('geo get',results.data.results.reverse()[0]);

@@ -72,7 +72,7 @@ angular.module('app', ['ui.select','ui.bootstrap', 'app.auth', 'app.trip', 'app.
 })
 .config(function(uiGmapGoogleMapApiProvider) {
     uiGmapGoogleMapApiProvider.configure({
-        key: googleMapkey,
+        key: 'AIzaSyDB9SYm3G2Om-qWU3uQ_hVYUhZ5fC37QIs',
         v: '3.20', //defaults to latest 3.X anyhow
         libraries: 'weather,geometry,visualization'
     });
