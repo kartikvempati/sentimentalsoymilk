@@ -3,14 +3,13 @@
   "description": "Itinerary",
   "main": "index.js",
   "authors": [
-    "Justin, Tessa, Liza, Josh"
+    "Kartik Kyle Byron"
   ],
   "license": "MIT",
   "private": true,
   "keywords": [
     "angular"
   ],
-  "homepage": "https://github.com/sentimentalsoymilk/sentimentalsoymilk",
   "moduleType": [],
   "ignore": [
     "**/.*",
@@ -33,6 +32,6 @@
     "ngFitText": "~3.3.3"
   },
   "resolutions": {
-    "angular": "1.4.8"
+    "angular": "~1.4.8"
   }
 }
