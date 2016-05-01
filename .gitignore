@@ -30,7 +30,6 @@ dist/
 node_modules/
 bower_components/
 lib/
-!lib/env/
 
 # Floobits
 .floo
