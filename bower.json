@@ -31,5 +31,8 @@
     "angular-google-maps": "~2.2.1",
     "ui-select": "angular-ui-select#~0.13.2",
     "ngFitText": "~3.3.3"
+  },
+  "resolutions": {
+    "angular": "1.4.8"
   }
 }
