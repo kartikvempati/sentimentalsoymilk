@@ -8,6 +8,9 @@
     "start": "nodemon server/server.js",
     "postinstall": "bower install"
   },
+  "engines": {
+    "node": "5.2.0"
+  },
   "keywords": [
     "angular"
   ],
